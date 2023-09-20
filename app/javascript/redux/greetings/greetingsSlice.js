@@ -1,12 +1,11 @@
-import { FETCH_GREETING_SUCCESS } from '../actions/types';
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-export const fetchGreeting = createAsyncThunk('greetings/getGreetings', async () => {
+export const getGreetings = createAsyncThunk('greetings/getGreetings', async () => {
   try {
-    const response = await axios.get('/api/greetings/random');
+    const response = await axios.get('/greetings/random');
     const message = response.data.greeting;
-    dispatch({ type: FETCH_GREETING_SUCCESS, payload: message });
+    return message;
   } catch (error) {
     console.error(error);
   }

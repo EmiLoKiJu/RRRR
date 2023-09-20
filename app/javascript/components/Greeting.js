@@ -1,22 +1,21 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { fetchGreeting } from '../redux/greetings/greetingsSlice';
+import { getGreetings } from '../redux/greetings/greetingsSlice';
 
-const Greeting = ({ message, fetchGreeting }) => {
+const Greeting = ({ message, getGreetings }) => {
   useEffect(() => {
-    fetchGreeting();
-  }, [fetchGreeting]);
+    getGreetings();
+  }, [getGreetings]);
 
   return (
     <div>
-      <h1>Greeting</h1>
-      <p>{message}</p>
+      <h1>{message}</h1>
     </div>
   );
 };
 
 const mapStateToProps = (state) => ({
-  message: state.greeting.message,
+  message: state.greetings.message,
 });
 
-export default connect(mapStateToProps, { fetchGreeting })(Greeting);
+export default connect(mapStateToProps, { getGreetings })(Greeting);
