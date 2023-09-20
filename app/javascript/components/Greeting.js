@@ -15,6 +15,11 @@ const Greeting = ({ message, getGreetings }) => {
   );
 };
 
+Greeting.defaultProps = {
+  message: '',
+  getGreetings: () => {},
+};
+
 Greeting.propTypes = {
   message: PropTypes.string,
   getGreetings: PropTypes.func,
