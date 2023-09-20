@@ -9,8 +9,7 @@ import Greeting from './Greeting';
 const App = () => (
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Greeting />}>
-      </Route>
+      <Route path="/" element={<Greeting />} />
     </Routes>
   </BrowserRouter>
 );
