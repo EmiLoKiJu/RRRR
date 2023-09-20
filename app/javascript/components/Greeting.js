@@ -14,6 +14,11 @@ const Greeting = ({ message, getGreetings }) => {
   );
 };
 
+Greeting.propTypes = {
+  message: PropTypes.string,
+  getGreetings: PropTypes.func,
+};
+
 const mapStateToProps = (state) => ({
   message: state.greetings.message,
 });

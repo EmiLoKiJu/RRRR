@@ -7,7 +7,7 @@ export const getGreetings = createAsyncThunk('greetings/getGreetings', async () 
     const message = response.data.greeting;
     return message;
   } catch (error) {
-    console.error(error);
+    throw error;
   }
 });
 

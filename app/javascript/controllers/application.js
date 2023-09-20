@@ -6,4 +6,6 @@ const application = Application.start();
 application.debug = false;
 window.Stimulus = application;
 
+/* eslint-disable import/prefer-default-export */
 export { application };
+/* eslint-enable import/prefer-default-export */

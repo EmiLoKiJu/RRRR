@@ -7,9 +7,11 @@ import { Provider } from 'react-redux';
 import App from './components/App';
 import store from './redux/store';
 
+/* eslint-disable react/no-deprecated */
 ReactDOM.render(
   <Provider store={store}>
     <App />
   </Provider>,
   document.getElementById('root'),
 );
+/* eslint-enable react/no-deprecated */
