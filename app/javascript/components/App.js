@@ -1,11 +1,18 @@
 import React from 'react';
-// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from 'react-router-dom';
 import Greeting from './Greeting';
 
 const App = () => (
-  <div>
-    <Greeting />
-  </div>
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Greeting />}>
+      </Route>
+    </Routes>
+  </BrowserRouter>
 );
 
 export default App;
